@@ -22,7 +22,7 @@ $(document).ready(function(){
   var headings = [];
 
   var collectHeaders = function(){
-    headings.push({"top":$(this).offset().top - 30,"text":$(this).text()});
+    headings.push({"top":$(this).offset().top - 60,"text":$(this).text()});
   }
 
   if($(".markdown-body h1").length > 1) $(".markdown-body h1").each(collectHeaders)
