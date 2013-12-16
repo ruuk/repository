@@ -90,7 +90,8 @@ h1.title {
 p.tagline {
   padding: 20px 20px 0;
   color: #fff;
-  font-size: 17px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 #main {
@@ -202,7 +203,7 @@ p.tagline {
   font-weight: bold;
 }
 
-.current-section a {
+.current-section a.scrolltop {
   float: right;
   text-indent: -10000px;
   background: transparent url(../images/top.png) no-repeat 0 0;

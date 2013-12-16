@@ -37,11 +37,11 @@ $(document).ready(function(){
       return false;
     }
     $(".current-section").css({"opacity":1,"visibility":"visible"});
-    for(var i in headings) {
-      if(scrolltop >= headings[i].top) {
-        $(".current-section .name").text(headings[i].text);
-      }
-    }
+//    for(var i in headings) {
+//      if(scrolltop >= headings[i].top) {
+//        $(".current-section .name").text(headings[i].text);
+//      }
+//    }
   });
 
   $(".current-section a").click(function(){
