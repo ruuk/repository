@@ -44,7 +44,7 @@ $(document).ready(function(){
 //    }
   });
 
-  $(".current-section a").click(function(){
+  $(".current-section a.scrolltop").click(function(){
     $(window).scrollTop(0);
     return false;
   })
