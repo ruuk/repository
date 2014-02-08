@@ -1,0 +1,2 @@
+#!/bin/sh
+md5sum <addons.xml | cut -d ' ' -f 1 > addons.xml.md5

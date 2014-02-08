@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+  <addon id="script.web.viewer2"
+         name="Web Viewer 2 (alpha)"
+         version="0.0.1"
+         provider-name="Rick Phillips (ruuk)">
+    <requires>
+      <import addon="xbmc.python" version="2.1.0"/>
+      <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    </requires>
+    <extension point="xbmc.python.script"
+               library="lib/webviewer/webviewer.py">
+      <provides>executable</provides>
+    </extension>
+  <!--   <extension point="xbmc.python.module" -->
+  <!--              library="lib" /> -->
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <summary lang="en">Simple web browser</summary>
+      <description lang="en">
+  Web Viewer is a linear text web browser. It is linear because it doesn't render pages, it filters them and displays text in the order it is found in the original HTML.
+
+  Web viewer also allows addon developers to process application authorization (ie. facebook,flickr etc.) with little programming and without violating terms of use.
+
+  What it does:
+      *You can follow links, fill out forms, view images
+      *Stream video/audio links
+      *It has back/forward history
+      *Bookmarks
+
+  What it doesn't do:
+      *Handle style sheets, javascript, flash, etc.
+      *Make web pages look good :)
+      *Lots of other stuff
+      </description>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+      <forum>http://forum.xbmc.org/showthread.php?tid=90007</forum>
+      <source>http://github.com/ruuk/script.web.viewer2</source>
+    </extension>
+  </addon>
+
+  <addon id="script.module.password.storage" name="Password Storage" version="0.1.0" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  	</requires>
+  	<extension point="xbmc.python.script" library="main.py">
+  		<provides>executable</provides>
+  	</extension>
+  	<extension point="xbmc.python.module" library="lib" />
+  	<extension point="xbmc.addon.metadata">
+  		<platform>all</platform>
+  		<summary lang="en">Module providing encrypted password storage</summary>
+  		<description lang="en">Module providing encrypted password storage via keyrings. Will attempt to use the system keyring if available, or fallback to an internal file based encrypted keyring.</description>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum></forum>
+  		<source>http://github.com/ruuk/script.module.password.storage</source>
+  	</extension>
+  </addon>
+
+  <addon id="script.bluray.com" name="Blu-ray.com" version="0.1.2" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.module.requests2" version="2.2.1"/>
+  		<import addon="script.module.beautifulsoup4" version="4.3.1" />
+  	</requires>
+  	<extension point="xbmc.python.script" library="lib/main.py">
+  		<provides>executable</provides>
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+  		<platform>all</platform>
+  		<summary lang="en">Blu-ray.com reviews, releases, deals and search.</summary>
+  		<description lang="en">Enjoy Blu-ray.com content on your TV. Blu-ray.com provides great reviews with 1080p screenshots, which are nice to preview on your actual TV. You can also browse the latest releases and look for the latest Blu-ray deals. Currently in an exprimental stage is access to collections for registerd users, with the ability to mark titles watched.</description>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum></forum>
+  		<source>http://github.com/ruuk/script.bluray.com</source>
+  	</extension>
+  </addon>
+
+  <addon id="plugin.video.geekandsundry" name="Geek &amp; Sundry" version="0.1.2" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.module.xbmcswift2" version="1.1.1" />
+  		<import addon="plugin.video.youtube" version="4.4.6" />
+  		<import addon="script.module.beautifulsoup4" version="4.3.1" />
+  	</requires>
+  	<extension point="xbmc.python.pluginsource" library="geekandsundry.py">
+  		<provides>video</provides>
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+  		<summary lang="en">geekandsundry.com videos</summary>
+  		<description>Geek &amp; Sundry videos such as TableTop, The Guild and Space Janitors</description>
+  		<platform>all</platform>
+  		<language></language>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=180283</forum>
+  		<source>http://github.com/ruuk/plugin.video.geekandsundry</source>
+  	</extension>
+  </addon>
+
+  <addon id="script.facebook.media" name="Facebook Media" version="0.9.9" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.module.simplejson" version="2.0.9" />
+  		<import addon="script.module.mechanize" version="0.2.6" />
+  		<import addon="script.module.password.storage" version="0.1.0" />
+  	</requires>
+  	<extension point="xbmc.python.script" library="default.py">
+  		<provides>executable</provides>
+  		<provides>image</provides>
+  		<provides>video</provides>
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+  		<platform>all</platform>
+  		<summary lang="en">Browse Facebook photos and videos</summary>
+  		<description lang="en">Browse your and your friends' photos and videos. View and add comments and likes. View image tags.</description>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=82500</forum>
+  		<source>http://github.com/ruuk/script.facebook.media</source>
+  	</extension>
+  </addon>
+
+  <addon id="script.web.viewer" name="Web Viewer" version="0.9.15" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.module.mechanize" version="0.2.6" />
+  	</requires>
+  	<extension point="xbmc.python.script" library="lib/webviewer/webviewer.py">
+  		<provides>executable</provides>
+  	</extension>
+  	<extension point="xbmc.python.module" library="lib" />
+  	<extension point="xbmc.addon.metadata">
+  		<platform>all</platform>
+  		<summary lang="en">Simple web browser</summary>
+  		<description lang="en">
+  			Web Viewer is a linear text web browser. It is linear because it doesn't render pages, it filters them and displays text in the order it is found in the original HTML.
+
+  			Web viewer also allows addon developers to process application authorization (ie. facebook,flickr etc.) with little programming and without violating terms of use.
+
+  			What it does:
+  			*You can follow links, fill out forms, view images
+  			*Stream video/audio links
+  			*It has back/forward history
+  			*Bookmarks
+
+  			What it doesn't do:
+  			*Handle style sheets, javascript, flash, etc.
+  			*Make web pages look good :)
+  			*Lots of other stuff
+  		</description>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=90007</forum>
+  		<source>http://github.com/ruuk/script.web.viewer</source>
+  	</extension>
+  </addon>
+
+  <addon id="script.evernote" name="X-Note (Evernote)" version="0.3.1" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.web.viewer" version="0.9.4" />
+  	</requires>
+
+  	<extension point="xbmc.python.script" library="lib/xnote.py">
+  		<provides>executable</provides>
+  	</extension>
+
+  	<extension point="xbmc.addon.metadata">
+  		<summary lang="en">X-Note: Access Evernote</summary>
+  		<description>View and manage your Evernote notebooks and notes. Create notes and save XBMC logs and screenshots to Evernote</description>
+  		<platform>all</platform>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=124361</forum>
+  		<source>http://github.com/ruuk/script.evernote</source>
+  	</extension>
+  </addon>
+
+  <addon id="screensaver.plugin.slideshow" name="Plugin Slideshow" version="0.0.11" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  	</requires>
+  	<extension point="xbmc.ui.screensaver" library="pluginscreensaver.py"></extension>
+  	<extension point="xbmc.service" library="service.py" start="login"></extension>
+  	<extension point="xbmc.addon.metadata">
+  		<summary lang="en">Screensaver that displays an image slideshow from a plugin</summary>
+  		<description lang="en">The Slideshow screensaver will show you a slide show of images using various transition effects. It can be configured to show images from image plugins installed on XBMC</description>
+  		<platform>all</platform>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=153057</forum>
+  		<source>http://github.com/ruuk/screensaver.plugin.slideshow</source>
+  	</extension>
+  </addon>
+
+  <addon id="plugin.image.picasa"
+         name="PicasaWeb"
+         version="1.0.2"
+         provider-name="Rick Phillips (ruuk)">
+    <requires>
+      <import addon="xbmc.python" version="2.1.0"/>
+      <import addon="script.module.elementtree" version="1.2.7"/>
+    </requires>
+
+    <extension point="xbmc.python.pluginsource"
+              library="default.py">
+          <provides>image</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Plugin to browse PicasaWeb albums and photos/videos</summary>
+      <summary lang="nl">Blader door uw PicasaWeb albums en afbeeldingen van u zelf of uw vrienden.</summary>
+
+      <description lang="en">Browse your PicasaWeb albums and tags. Browse your favorite user's albums, tags, and their favorite users. Search your photos/videos, your contact's photos/videos, and search PicasaWeb. View maps of photos with geo location data.</description>
+      <description lang="nl">Blader door uw PicasaWeb albums en afbeeldingen van u zelf of uw vrienden.</description>
+      <language></language>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+      <forum>http://forum.xbmc.org/showthread.php?tid=83499</forum>
+      <source>http://github.com/ruuk/plugin.image.picasa</source>
+    </extension>
+  </addon>
+
+  <addon id="plugin.image.google" name="google" version="0.9.8" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.module.beautifulsoup" version="3.0.8" />
+  	</requires>
+
+  	<extension point="xbmc.python.pluginsource" library="default.py">
+  		<provides>image</provides>
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+  		<summary>Plugin to search and browse google images</summary>
+  		<description>Search, view, and save Google Images. Includes advanced search and search history.
+
+  Note: Clicking on an image result will give you a list of images from the page the image is on, ordered by probable relevance, but containing many unwanted images.
+  		</description>
+  		<platform>all</platform>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=83496</forum>
+  		<source>http://github.com/ruuk/plugin.image.google</source>
+  	</extension>
+  </addon>
+
+  <addon id="script.forum.browser"
+         name="Forum Browser"
+         version="2.1.46"
+         provider-name="Rick Phillips (ruuk)">
+    <requires>
+      <import addon="xbmc.python" version="2.1.0"/>
+      <import addon="script.module.simplejson" version="2.0.9"/>
+      <import addon="script.web.viewer" version="0.9.6"/>
+      <import addon="script.module.password.storage" version="0.1.0" />
+    </requires>
+    <extension point="xbmc.python.script"
+               library="default.py">
+      <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="login"></extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="be">Browse forums within XBMC</summary>
+      <summary lang="de">Durchsuche Foren innerhalb von XBMC</summary>
+      <summary lang="el">Περιήγηση σε φόρουμ μέσω του XBMC</summary>
+      <summary lang="en">Browse forums within XBMC</summary>
+      <summary lang="es">Visitar foros desde XBMC</summary>
+      <summary lang="fr">Naviguer dans les forums avec XBMC</summary>
+      <summary lang="gl">Navegue polos foros a través do XBMC</summary>
+      <summary lang="he">עיuן בפורומים דרך XBMC</summary>
+      <summary lang="hr">Pregledavajte forume sa XBMC-om</summary>
+      <summary lang="it">Sfoglia i forum dall'XBMC</summary>
+      <summary lang="ko">XBMC에서 포럼 탐색</summary>
+      <summary lang="nl">Zoek forums vanuit XBMC</summary>
+      <summary lang="pl">Przeglądaj fora z użyciem XBMC</summary>
+      <summary lang="pt">Navegue por fórums através do XBMC</summary>
+      <summary lang="pt_BR">Navegue pelos fórums através do XBMC</summary>
+      <summary lang="sv">Bläddra bland forum i XBMC</summary>
+      <description lang="be">Browse Forums in XBMC. Supports Tapatalk (including ProBoards, Yuku) and Forumrunner enabled forums for a total of 90,000+ forums. View forums, threads, posts, subscriptions and private messages. Follow links in Web Viewer. Post replies, send private messages, delete posts, quote posts. View images in posts, follow post forum links and download post links.</description>
+      <description lang="de">Durchsuchen Forums in XBMC. Unterstützt Tapatalk aktivierte Foren (über 60000) und Forumrunner aktivierte Foren. Unterstützt auch boxee.tv. Foren, Themen, Beiträge , Abonnements und private Nachrichten anzeigen. Folgen Sie den Links im Web Viewer. Beiträge Antworten, private Nachrichten senden, Beiträge löschen, Zitate auch. Anzeigen von Bildern in Beiträgen, Forumsbeiträge Links folgen und Links downloaden. </description>
+      <description lang="el">Περιηγηθείτε σε Φόρουμ μέσω του XBMC. Υποστηρίζονται φόρουμ με ενεργό Tapatalk (πάνω από 60000) και Forumrunner, καθώς και το boxee.tv. Δείτε φόρουμ, θέματα, αναρτήσεις, συνδρομές και προσωπικά μηνύματα. Ακολουθήστε συνδέσμους στην Προβολή Ιστού. Αναρτήστε απαντήσεις, στείλτε προσωπικά μηνύματα, διαγράψτε αναρτήσεις, παραθέστε αναρτήσεις. Προβάλλετε εικόνες σε αναρτήσεις, ακολουθήστε συνδέσμους αναρτήσεων λήψεων.</description>
+      <description lang="en">Browse Forums in XBMC. Supports Tapatalk enabled forums (over 60000) and Forumrunner enabled forums. Also supports boxee.tv. View forums, threads, posts, subscriptions and private messages. Follow links in Web Viewer. Post replies, send private messages, delete posts, quote posts. View images in posts, follow post forum links and download post links.</description>
+      <description lang="es">Visita foros desde XBMC. Soporta foros válidos para Tapatalk (más de 30.000) y Forumrunner. También soporta boxee.tv. Ve foros, hilos, temas, suscripciones y mensajes privados. Abre enlaces con Web Viewer. Escribe respuestas, manda mensajes privados, borra mensajes y menciona mensajes. Ve imágenes en mensajes, sigue enlaces del foro y descarga enlaces.</description>
+      <description lang="fr">Naviguer dans les forums dans XBMC. Supporte Tapatalk  forums activés (plus de 60000) et Forumrunner forums activés. Supporte aussi boxee.tv. Voir les forum, fils de discussion, messages, souscriptions et messages privés.&#10;Suivre les liens dans Web Viewer. Poster des réponses, envoyer des messages privés, effacer des messages, coter des messages. Voir des images dans les messages, suivre les liens des messages de forum et les télécharger.</description>
+      <description lang="gl">Navegue polos foros a través do XBMC. É compatíbel cos foros Tapatalk (máis de 60000) e Forumrunner e tamén con boxee.tv. Vexa foros, fíos, mensaxes, subscricións e mensaxes privadas. Consulte as ligazóns a través o Visor Web. Publique respostas, envie mensaxes privadas, elimine publicacións ou mencióneas. Vexa as imaxes das publicacións, siga e descargue as ligazóns das publicacións.</description>
+      <description lang="he">עיין בפורומים ב-XBMC. תמיכה בפורומי Tapatalk (מעל ל-60000) ו-Forumrunner. תמיכה ב-boxee.tv. הצגת פורומים, שרשורים, תגובות, הרשמות והודעות פרטיות. פתח קישורים ב-Web Viewer. פרסם תגובות, שלח הודעות פרטיות, מחק תגובות. הצג תמונות בתגובות, פתח קישורים והורד קבצים מקישורים המופיעים בתגובות.</description>
+      <description lang="hr">Pregledavajte forume u XBMC-u. Podržava Tapatalk omogućene forume (preko 60000) i Forumrunner omogućene forume. Isto tako podržava boxee.tv. Pregledavajte forume, teme, postove, pretplate i privatne poruke. Slijedite poveznice u Web pregledniku. Replicirajte postove, šaljite privatne poruke, brišite postove, citirajte postove. Pogledajte slike u postovima, slijedite poveznice postova foruma i preuzmite poveznice postova.</description>
+      <description lang="it">Sfoglia i Forum dall'XBMC. Supporta i forum che usano Tapatlk (circa 60000) e Forumrunner. Supporta pure boxee.tv. Vedi i forum, le discussioni, i post, le sottoscrizioni ed i messaggi privati. Segui i link nel Visualizzatore Web. Rispondi ai post, invia messaggi privati, cancella i post e quotali. Vedi le immagini, segui i link dei post e scaricali.</description>
+      <description lang="nl">Zoek Forums in XBMC. Ondersteunt Tapatalk gemachtigde forums (over 60000) en Forumrunner gemachtigde forums. Ondersteunt ook boxee.tv. bekijk forums, threads, berichten, inschrijvingen en private berichten. volg links in Web Viewer. Post beantwoordingen, stuur privéberichten, verwijder berichten, quote berichten, bekijk afbeeldingen in berichten, volg post forum links en download post links.</description>
+      <description lang="pl">Przeglądaj fora z użyciem XBMC. Posiada wsparcie dla forów opartych o Tapatalk (ponad 60000) oraz Forumrunner. Wspiera również boxee.tv. Przeglądaj fora, wątki, posty, subskrypcje i wiadomości prywatne. Umożliwia podążanie za linkami w przeglądarce internetowej a także umieszczanie odpowiedzi, wysyłanie prywatnych wiadomości, usuwanie czy cytowanie odpowiedzi. Przeglądanie obrazów w wątku, podążanie za linkami z forum i zapisywanie umieszczonych linków.</description>
+      <description lang="pt">Navegue pelos fórums no XBMC. Compatível com fórums tapatalk (mais de 60000) e Forumrunner. Também suporta boxee.tv. Veja fórums, tópicos, mensagens, subscrições e mensagens privadas. Consulte ligações através do Web Viewer. Coloque respostas, envie mensagens privadas, apague mensagens, cite mensagens. Veja imagens nas mensagens, consulte ligações das mensagens do fórum e transfira ligações das mensagens.</description>
+      <description lang="pt_BR">Navegue pelos fórums no XBMC. Compatível com fórums tapatalk (mais de 60000) e Forumrunner. Também suporta boxee.tv. Veja fórums, tópicos, mensagens, subscrições e mensagens privadas. Consulte ligações através do Web Viewer. Coloque respostas, envie mensagens privadas, apague mensagens, cite mensagens. Veja imagens nas mensagens, consulte ligações das mensagens do fórum e transfira ligações das mensagens.</description>
+      <description lang="sv">Bläddra bland forum i XBMC. Stödjer Tapatalk  (över 60000) och Forumrunner aktiverade forum. Även boxee.tv stödjs. Förhandsgranska forum, trådar, inlägg, prenumerationer och privatmeddelanden. Följ länkar i Web Viewer. Gör inlägg, skicka privata meddelanden, ta bort inlägg, citera inlägg. Se bilder i inlägg, följ länkar och laddar ner länkar.</description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+      <forum>http://forum.xbmc.org/showthread.php?tid=85018</forum>
+      <source>http://github.com/ruuk/script.forum.browser</source>
+    </extension>
+  </addon>
+
+  <addon id="script.module.sharesocial"
+         name="Share Social"
+         version="0.2.6"
+         provider-name="Rick Phillips (ruuk)">
+    <requires>
+      <import addon="xbmc.python" version="2.0"/>
+      <import addon="script.web.viewer" version="0.9.6"/>
+    </requires>
+
+    <extension point="xbmc.python.script"
+               library="share.py">
+      <provides>executable</provides>
+    </extension>
+
+    <extension point="xbmc.python.module"
+              library="lib" />
+
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Social Sharing Module</summary>
+      <description>Allows addons to share between social web entities</description>
+  	<platform>all</platform>
+    </extension>
+  </addon>
+
+  <addon id="plugin.image.flickr" name="flickr" version="1.0.1" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.module.elementtree" version="1.2.7" />
+  	</requires>
+
+  	<extension point="xbmc.python.pluginsource" library="default.py">
+  		<provides>image</provides>
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+  		<summary lang="en">flickrXBMC: flickr on XBMC</summary>
+  		<summary lang="de">flickrXBMC: flickr in XBMC</summary>
+  		<summary lang="es">flickrXBMC: flickr en XBMC</summary>
+  		<summary lang="nl">flickrXBMC: Flickr op XBMC</summary>
+  		<description>flickrXBMC allows you to: Browse your photostream, collections, sets, galleries, tags, places, and favorites. Browse your contacts and their content. Search you or your contacts photostream, or search flickr.</description>
+  		<description lang="de">flickrXBMC ermöglicht Fotostreams, Sammlungen, Sets, Gallerien, Tags, Orte und Favoriten zu dursuchen. Durchsuche deine Freunde und deren Fotos. Durchsuche deine Fotos oder die deiner Freunde, oder durchsuche flickr allgemein.</description>
+  		<description lang="es">flickrXBMC le permite: Busca en tu galería de fotos, colecciones, conjuntos, galerías, etiquetas, lugares, y favoritos. Busque sus contactos y su contenido. Buscar contactos que usted o su galería de fotos, o flickr de búsqueda.</description>
+  		<description lang="nl">flickrXBMC geeft u de mogelijkheid om te bladeren door uw photostreams, verzamelingen, sets, galerijen, tags, plaatsen en favorieten. Bekijk uw contacten en hun foto's. Zoek door uw eigen of van uw contacts de photostreams of door geheel Flickr.</description>
+  		<platform>all</platform>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=81593</forum>
+  		<source>http://github.com/ruuk/plugin.image.flickr</source>
+  	</extension>
+  </addon>
+
+  <addon id="script.tvrage.com" name="TVRage-Eps" version="1.1.2" provider-name="Rick Phillips (ruuk)">
+  	<requires>
+  		<import addon="xbmc.python" version="2.1.0" />
+  		<import addon="script.module.elementtree" version="1.2.7" />
+  		<import addon="script.module.simplejson" version="2.0.9" />
+  		<import addon="script.module.requests2" version="2.2.1"/>
+  	</requires>
+  	<extension point="xbmc.python.script" library="default.py">
+  		<provides>video executable</provides>
+  	</extension>
+  	<extension point="xbmc.addon.metadata">
+  		<platform>all</platform>
+  		<summary lang="en">Quickly see which of your favorite shows are on next, and browse episode lists.</summary>
+  		<description lang="en">Search and save a list of your favorite shows to be automatically updated and sorted by what's on next and highlighted for what's on today and tomorrow. Shows next and previous episode details. Select a show to browse an episode list. Select an episode for a summary.
+  		</description>
+  		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+  		<forum>http://forum.xbmc.org/showthread.php?tid=82174</forum>
+  		<source>http://github.com/ruuk/script.tvrage.com</source>
+  	</extension>
+  </addon>
+</addons>
