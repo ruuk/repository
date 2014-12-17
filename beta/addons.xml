@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+  <addon id="service.xbmc.tts"
+         name="XBMC TTS"
+         version="0.0.86"
+         provider-name="Rick Phillips (ruuk), pvagner">
+    <requires>
+      <import addon="xbmc.python" version="2.14.0"/>
+    </requires>
+    <extension point="xbmc.service" library="main.py" start="login"></extension>
+    <extension point="xbmc.python.module" library="lib/module" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Text to speech for XBMC</summary>
+      <description lang="en">Text to speech for XBMC</description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+      <forum>http://forum.xbmc.org/showthread.php?tid=117199</forum>
+      <source>https://github.com/ruuk/service.xbmc.tts</source>
+  	<website>http://ruuk.github.io/service.xbmc.tts</website>
+    </extension>
+  </addon>
+
+  <addon id="ruuk.addon.repository"
+  	name="ruuk's Addon Repo"
+  	version="1.0.0"
+  	provider-name="Rick Phillips (ruuk)">
+  	<extension point="xbmc.addon.metadata">
+  		<platform>all</platform>
+  		<summary lang="en">ruuk's Addon Repo</summary>
+  		<description lang="en">ruuk's XBMC addon repository for bleeding edge and likely buggy :) versions.</description>
+  	</extension>
+  	<extension point="xbmc.addon.repository"
+  		name="ruuk's addon repository">
+  		<info>https://ruuks-repo.googlecode.com/svn/trunk/repo/addons.xml</info>
+  		<checksum>https://ruuks-repo.googlecode.com/svn/trunk/repo/addons.xml.md5</checksum>
+  		<datadir zip="true">https://ruuks-repo.googlecode.com/svn/trunk/repo/</datadir>
+  	</extension>
+  </addon>
+
+  <addon id="service.pushbullet"
+         name="Pushbullet"
+         version="0.8.22b"
+         provider-name="muttley,Rick Phillips (ruuk)">
+      <requires>
+          <import addon="xbmc.addon" version="12.0.0"/>
+          <import addon="xbmc.python" version="2.1.0"/>
+          <import addon="script.module.httplib2" version="0.8.0"/>
+          <import addon="script.module.six" version="1.7.3"/>
+          <import addon="script.module.youtube.dl" version="14.1104.0"/>
+          <import addon="script.module.requests" version="2.3.0"/>
+          <import addon="script.module.oauth.helper" version="0.0.7"/>
+      </requires>
+      <extension point="xbmc.service" library="service.py" start="login"/>
+      <extension point="xbmc.python.script" library="main.py">
+          <provides>executable</provides>
+      </extension>
+      <extension point="xbmc.addon.metadata">
+          <summary lang="en">Receive, view, send and manage Pusbullet pushes.</summary>
+          <description lang="en">A Pushbullet client that receives/sends pushes and/or mirrors other devices.
+  Send videos, images, notes, lists and addresses from your phone and PC to Kodi/XBMC. Currently allows viewing of videos, images, audio, notes, addresses (with map) and lists (checkable).
+          </description>
+          <disclaimer lang="en">The author is not responsible for anything. Please review the code if you do not trust.
+          </disclaimer>
+          <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007. Logo is copyright of PushBullet Inc</license>
+          <forum>http://forum.xbmc.org/showthread.php?tid=204567</forum>
+          <website>https://github.com/elbowz/xbmc.service.pushbullet</website>
+          <source>https://github.com/elbowz/xbmc.service.pushbullet</source>
+          <platform>all</platform>
+      </extension>
+  </addon>
+
+  <addon id="screensaver.plugin.slideshow" name="Plugin Slideshow" version="0.0.16" provider-name="Rick Phillips (ruuk)">
+      <requires>
+          <import addon="xbmc.python" version="2.1.0" />
+      </requires>
+      <extension point="xbmc.ui.screensaver" library="pluginscreensaver.py"></extension>
+      <extension point="xbmc.service" library="service.py" start="login"></extension>
+      <extension point="xbmc.python.script" library="pluginscreensaver.py"></extension>
+      <extension point="xbmc.addon.metadata">
+          <summary lang="en">Screensaver that displays an image slideshow from a plugin</summary>
+          <description lang="en">The Slideshow screensaver will show you a slide show of images using various transition effects. It can be configured to show images from image plugins installed on XBMC</description>
+          <platform>all</platform>
+          <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+          <forum>http://forum.xbmc.org/showthread.php?tid=153057</forum>
+          <source>http://github.com/ruuk/screensaver.plugin.slideshow</source>
+      </extension>
+  </addon>
+</addons>

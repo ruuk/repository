@@ -1,0 +1,24 @@
+Blu-ray.com Changelog
+
+Current Version : 0.1.2
+
+TODO:
+	Collection sort orders
+	More collection management options
+	Add to amazon wishlist/cart
+
+*** 0.1.2 ***
+
+Change from using requests2-2.2.1 module to requests-2.3.0
+
+*** 0.1.1 ***
+
+Fix for adding price tracking failing when the user is not already logged in
+
+*** 0.1.0 ***
+
+Initial public beta release
+
+*** 0.0.1 ***
+
+Project creation

@@ -1,0 +1,14 @@
+Blu-ray.com Changelog
+
+Current Version : 0.0.4
+
+TODO:
+	Stuff
+		
+*** 0.0.4 ***
+
+Initial public release
+
+*** 0.0.1 ***
+
+Project creation

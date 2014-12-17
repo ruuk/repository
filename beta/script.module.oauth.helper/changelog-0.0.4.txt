@@ -1,0 +1,5 @@
+Changelog for OAuth Helper
+
+*** 0.0.4 ***
+
+Add multiple user handling and improve token data save method

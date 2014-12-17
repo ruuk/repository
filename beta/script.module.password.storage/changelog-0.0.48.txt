@@ -1,0 +1,19 @@
+Password Storage Module Changelog 
+
+Current Version : 0.0.48
+
+0.0.48
+
+Fix to prevent use of file.PlaintextKeyring
+
+0.0.47
+
+First private repo release for other device testing
+
+0.0.2 - 0.0.46
+
+Initial coding and testing
+
+0.0.1
+
+Project start

@@ -1,0 +1,23 @@
+Password Storage Module Changelog 
+
+Current Version : 0.0.49
+
+0.0.49
+
+Fix for empty json causing error
+
+0.0.48
+
+Fix to prevent use of file.PlaintextKeyring
+
+0.0.47
+
+First private repo release for other device testing
+
+0.0.2 - 0.0.46
+
+Initial coding and testing
+
+0.0.1
+
+Project start

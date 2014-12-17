@@ -1,0 +1,8 @@
+Geek & Sundry Changelog
+
+Current Version : 0.0.1
+
+** 0.0.1 ***
+
+Project Creation
+Initial release

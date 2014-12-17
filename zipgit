@@ -1,0 +1,40 @@
+#/bin/bash
+repo=$2
+export repo
+if [ -z "$repo" ]; then
+	echo "Please set repository!"
+	exit
+fi
+
+cd $HOME/git/$1/
+if [ -n "$(git status --porcelain)" ]; then
+	echo "Addon needs a commit!"
+	exit
+fi
+target=$(cat addon.xml | egrep -o 'id="([^"]+)"' | cut -d \" -f 2)
+echo "Extracted ID: "$target
+version=$(cat addon.xml | grep -Pzom 1 '(?s)<addon[^>].*?version="([^"]+)"[^>].+?>' | egrep -o 'version="[^"]+"' | cut -d \" -f 2)
+echo "Extracted version: "$version
+
+if [ -e $HOME/git/repository/$repo/$1/$target"-"$version.zip ]
+then
+	echo "Version Exists!"
+	exit
+fi
+
+if [ ! -d $HOME/git/repository/$repo/$target/ ];
+then
+	echo "Creating target directory: "$target
+	mkdir $HOME/git/repository/$repo/$target/
+fi
+echo "Creating .zip file"
+$HOME/git/repository/git-archive-all --prefix=$target/ $HOME/git/repository/$repo/$target/$target"-"$version.zip
+echo "Copying changelog.txt"
+/bin/cp -rf changelog.txt $HOME/git/repository/$repo/$target/changelog-$version.txt
+echo "Copying addon.xml"
+/bin/cp -rf addon.xml $HOME/git/repository/$repo/$target/addon.xml
+echo "Copying icon.png"
+/bin/cp -rf icon.png $HOME/git/repository/$repo/$target/icon.png
+cd $HOME/git/repository/$repo/
+echo "Creating addons.xml"
+../update.py

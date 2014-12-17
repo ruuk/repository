@@ -1,0 +1,9 @@
+Changelog for OAuth Helper
+
+*** 0.0.5 ***
+
+Fix for accidentally overwriting the refresh token with an empty string
+
+*** 0.0.4 ***
+
+Add multiple user handling and improve token data save method

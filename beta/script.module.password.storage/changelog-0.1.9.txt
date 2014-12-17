@@ -1,0 +1,117 @@
+Password Storage Module Changelog
+
+Current Version : 0.1.9
+
+Tested Platforms:
+
+	Windows XP SP3:         Windows.RegistryKeyring
+	ATV2:                   Internal.PythonEncryptedKeyring
+	Ouya 1.0.12:            Internal.PythonEncryptedKeyring
+	OSX 10.6.3:             OS_X.Keyring
+	Ubuntu 13.10/XFCE:      SecretService.Keyring
+	OpenELEC 3.0 x86_64:    Internal.PythonEncryptedKeyring
+	Android - SG Note 3:    Internal.PythonEncryptedKeyring
+	Raspberry Pi (Raspbmc): Internal.PythonEncryptedKeyring
+	iOS:                    NOT TESTED
+
+-- 0.1.9 --
+
+Remove support for SecretService keyring and Gnome keyring as they are broken because of a DBus issue with XBMC
+
+-- 0.1.8 --
+
+Update keyring core to most recent version
+Fix for windows falling back to internal keyring
+Fix for errors on OSX
+
+-- 0.1.7 --
+
+Fix for import errors on Ouya and perhaps other platforms
+
+-- 0.1.6 --
+
+Fix for infinite loop on wrong keyring password entry
+Added RESET KEYRING option to Password Storage manager
+Fixes for display updates when changing password options
+Added and improved dialogs for password retrieval failure
+
+-- 0.1.5 --
+
+Fix for SecretService keyring errors causing fallback to Internal keyring
+
+-- 0.1.4 --
+
+Fix for keyring dialog still appearing on first run
+
+-- 0.1.3 --
+
+Internal keyring now defaults to storing random keyring key to disk
+
+-- 0.1.2 --
+
+Added delete() function
+
+-- 0.1.1 --
+
+Added encrypt() and decrypt() functions
+
+-- 0.1.0 --
+
+First public beta
+
+-- 0.0.58 --
+
+Localize strings
+Minor tweaks to the interface
+
+-- 0.0.57 --
+
+Changes and fixes to the interface
+
+-- 0.0.56 --
+
+Some internal naming changes
+	
+-- 0.0.55 --
+
+Fix for writing storage on android devices
+
+-- 0.0.54 --
+
+Test logging
+
+-- 0.0.53 --
+
+Another fix for storage location on android devices
+
+-- 0.0.52 --
+
+Fix for storage location on android devices
+
+-- 0.0.51 --
+
+Added logging of platform
+
+-- 0.0.50 --
+
+ACTUAL fix for empty json causing error
+
+-- 0.0.49 --
+
+Fix for empty json causing error
+
+-- 0.0.48 --
+
+Fix to prevent use of file.PlaintextKeyring
+
+-- 0.0.47 --
+
+First private repo release for other device testing
+
+-- 0.0.2 - 0.0.46 --
+
+Initial coding and testing
+
+-- 0.0.1 --
+
+Project start

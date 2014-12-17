@@ -1,0 +1,13 @@
+Blu-ray.com Changelog
+
+Current Version : 0.0.1
+
+TODO:
+	Reviews paging
+	Fix releases
+	
+
+*** 0.0.1 ***
+
+Project Creation
+Initial release
