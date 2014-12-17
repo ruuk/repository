@@ -13,7 +13,7 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 target=$(cat addon.xml | egrep -o 'id="([^"]+)"' | cut -d \" -f 2)
 echo "Extracted ID: "$target
-version=$(cat addon.xml | grep -Pzom 1 '(?s)<addon[^>].*?version="([^"]+)"[^>].+?>' | egrep -o 'version="[^"]+"' | cut -d \" -f 2)
+version=$(cat addon.xml | grep -aPzom 1 '(?s)<addon[^>].*?version="([^"]+)"[^>].+?>' | egrep -o 'version="[^"]+"' | cut -d \" -f 2)
 echo "Extracted version: "$version
 
 if [ -e $HOME/git/repository/$repo/$1/$target"-"$version.zip ]
