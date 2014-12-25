@@ -364,12 +364,12 @@
 
   <addon id="script.module.nvdacontrollerclient"
   	name="NVDA Controller Client DLL"
-  	version="1.0.2"
+  	version="1.0.3"
   	provider-name="Rick Phillips (ruuk)">
   	<extension point="xbmc.python.module" library="nvda" />
   	<extension point="xbmc.addon.metadata">
-  		<summary lang="en">Provides nvdacontollerclient32.dll for the XBMC/Kodi TTS Addon</summary>
-  		<description lang="en">Provides nvdacontollerclient32.dll for the XBMC/Kodi TTS Addon</description>
+  		<summary lang="en">Provides nvdacontollerclient32.dll</summary>
+  		<description lang="en">Provides nvdacontollerclient32.dll for the Kodi Screen Reader Addon to enable NVDA support</description>
   		<platform>windx</platform>
   		<license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
   		<forum>http://forum.xbmc.org/showthread.php?tid=117199</forum>
