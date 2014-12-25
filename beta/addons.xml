@@ -364,7 +364,7 @@
 
   <addon id="script.module.nvdacontrollerclient"
   	name="NVDA Controller Client DLL"
-  	version="1.0.0"
+  	version="1.0.1"
   	provider-name="Rick Phillips (ruuk)">
   	<extension point="xbmc.python.module" library="nvda" />
   	<extension point="xbmc.addon.metadata">

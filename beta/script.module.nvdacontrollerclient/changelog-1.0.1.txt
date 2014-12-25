@@ -1,0 +1,3 @@
+Changelog for nvdacontrollerclient
+
+Nothing to report :)
