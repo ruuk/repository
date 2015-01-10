@@ -116,4 +116,29 @@
       <source>http://github.com/ruuk/script.forum.browser</source>
     </extension>
   </addon>
+
+  <addon id="script.smoothstreams"
+         name="SmoothStreams.tv"
+         version="0.6.4a2"
+         provider-name="SmoothStreams">
+      <requires>
+          <import addon="xbmc.python" version="2.1.0"/>
+          <import addon="script.module.requests" version="2.3.0"/>
+          <import addon='script.module.simple.downloader' version='0.9.1'/>
+      </requires>
+      <extension point="xbmc.python.script" library="default.py">
+          <provides>video</provides>
+      </extension>
+      <extension point="xbmc.service" library="service.py" start="login"></extension>
+      <extension point="xbmc.addon.metadata">
+          <summary lang="en">SmoothStreams.tv streams viewer</summary>
+          <description lang="en">SmoothStreams.tv streams viewer</description>
+          <disclaimer lang="en"></disclaimer>
+          <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007.</license>
+          <forum></forum>
+          <website></website>
+          <source></source>
+          <platform>all</platform>
+      </extension>
+  </addon>
 </addons>

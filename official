@@ -1,0 +1,21 @@
+#/bin/bash
+cd $HOME/git/$1/
+if [ -n "$(git status --porcelain)" ]; then
+	echo "Addon needs a commit!"
+	exit
+fi
+target=$(cat addon.xml | egrep -o 'id="([^"]+)"' | cut -d \" -f 2)
+echo "Extracted ID: "$target
+
+if [ -d $HOME/git/repo-scripts/$target/ ];
+then
+	echo "Deleting directory: "$target
+	rm -rf $HOME/git/repo-scripts/$target/
+fi
+echo "Creating .zip file"
+if [ -f $HOME/tmp/official.zip ];
+then
+	rm $HOME/tmp/official.zip
+fi
+$HOME/git/repository/git-archive-all --prefix=$target/ $HOME/tmp/official.zip
+unzip -qq $HOME/tmp/official.zip -d $HOME/git/repo-scripts/

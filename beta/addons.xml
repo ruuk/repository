@@ -379,7 +379,7 @@
 
   <addon id="script.forum.browser"
          name="Forum Browser"
-         version="2.1.71"
+         version="2.1.72b"
          provider-name="Rick Phillips (ruuk)">
     <requires>
       <import addon="xbmc.python" version="2.14.0"/>
