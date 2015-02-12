@@ -114,7 +114,7 @@
 
   <addon id="service.pushbullet"
          name="Pushbullet"
-         version="0.8.24b"
+         version="0.8.26b"
          provider-name="muttley,Rick Phillips (ruuk)">
       <requires>
           <import addon="xbmc.addon" version="12.0.0"/>
