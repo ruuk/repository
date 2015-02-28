@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+  <addon id="service.xbmc.tts"
+         name="Kodi Screen Reader"
+         version="0.1.2a4"
+         provider-name="Rick Phillips (ruuk), pvagner">
+    <requires>
+      <import addon="xbmc.python" version="2.14.0"/>
+      <import addon="script.module.oe.pi.extras" version="0.0.3" optional="true"/>
+    </requires>
+    <extension point="xbmc.service" library="main.py" start="login"></extension>
+    <extension point="xbmc.python.module" library="lib/module" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Text to speech for XBMC</summary>
+      <description lang="en">Text to speech for XBMC</description>
+      <platform>all</platform>
+      <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+      <forum>http://forum.xbmc.org/showthread.php?tid=117199</forum>
+      <source>https://github.com/ruuk/service.xbmc.tts</source>
+  	<website>http://ruuk.github.io/service.xbmc.tts</website>
+    </extension>
+  </addon>
+
   <addon id="service.pushbullet"
          name="Pushbullet"
          version="0.8.22a"
@@ -47,6 +68,21 @@
                   <checksum>https://raw.githubusercontent.com/ruuk/repository/master/alpha/addons.xml.md5</checksum>
                   <datadir zip="true">https://raw.githubusercontent.com/ruuk/repository/master/alpha/</datadir>
           </extension>
+  </addon>
+
+  <addon id="script.module.oe.pi.extras"
+  	name="Binaries for OpenElec"
+  	version="0.0.3"
+  	provider-name="Rick Phillips (ruuk)">
+  	<extension point="xbmc.python.module" library="lib" />
+  	<extension point="xbmc.addon.metadata">
+  		<summary lang="en">Currently provides mpg321</summary>
+  		<description lang="en">Currently provides mpg321</description>
+  		<platform>linux</platform>
+  		<license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+  		<forum></forum>
+  		<source></source>
+  	</extension>
   </addon>
 
   <addon id="script.forum.browser"
