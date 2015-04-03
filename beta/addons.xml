@@ -217,6 +217,20 @@
   	</extension>
   </addon>
 
+  <addon id="script.module.addon.signals"
+  	name="Addon Signals"
+  	version="0.0.1"
+  	provider-name="Rick Phillips (ruuk)">
+  	<extension point="xbmc.python.module" library="lib" />
+  	<extension point="xbmc.addon.metadata">
+  		<summary lang="en">Inter-addon signalling</summary>
+  		<description lang="en">Provides signal/slot mechanism for inter-addon communication</description>
+  		<platform>all</platform>
+  		<license>GNU GENERAL PUBLIC LICENSE Version 2.1, February 1999</license>
+  		<source>https://github.com/ruuk/script.module.addon.signals</source>
+  	</extension>
+  </addon>
+
   <addon id="script.facebook.media" name="Facebook Media" version="0.9.13" provider-name="Rick Phillips (ruuk)">
   	<requires>
   		<import addon="xbmc.python" version="2.1.0" />
