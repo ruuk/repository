@@ -195,7 +195,7 @@
     </extension>
   </addon>
 
-  <addon id="plugin.video.geekandsundry" name="Geek &amp; Sundry" version="0.1.4" provider-name="Rick Phillips (ruuk)">
+  <addon id="plugin.video.geekandsundry" name="Geek &amp; Sundry" version="0.1.5" provider-name="Rick Phillips (ruuk)">
   	<requires>
   		<import addon="xbmc.python" version="2.1.0" />
   		<import addon="script.module.xbmcswift2" version="1.1.1" />
@@ -509,7 +509,7 @@
   	</extension>
   </addon>
 
-  <addon id="script.tvrage.com" name="TVRage-Eps" version="1.1.5" provider-name="Rick Phillips (ruuk)">
+  <addon id="script.tvrage.com" name="TVRage-Eps" version="1.1.6" provider-name="Rick Phillips (ruuk)">
   	<requires>
   		<import addon="xbmc.python" version="2.1.0" />
   		<import addon="script.module.elementtree" version="1.2.7" />
