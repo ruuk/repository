@@ -1,0 +1,86 @@
+Plugin Slideshow Screensaver Changelog
+
+** 0.0.17 ***
+
+Changed "Amount Of Seconds To Display Each Image" setting to allow up to 30 seconds
+
+** 0.0.16 ***
+
+Fix for settings being grayed out
+Fix for broken 'Source Path' selection in settings
+
+** 0.0.15 ***
+
+Fix for source path not being selectable on Helix
+
+** 0.0.14 ***
+
+Fix for modules not being added to import path on Helix causing import errors
+
+** 0.0.13 ***
+
+Fixes for errors with some plugins
+
+** 0.0.12 ***
+
+Now works with plugins that don't use default.py
+
+** 0.0.11 ***
+
+Fix for caption format in settings not affecting output
+
+** 0.0.10 ***
+
+Added the ability to add formatted captions
+Added the ability to add exif information in captions
+
+** 0.0.9 ***
+
+Animated loading indicator
+Added progress percent on loading indicator (when available)
+Fix for error image not displaying on error
+Added some code for better pre-loading of images
+Improved exiting screensaver when loading plugin images
+Converted strings.xml to strings.po
+Updated addon.xml for Gotham
+Added missing XML declarations
+
+** 0.0.8 ***
+
+Version change to fix repo
+
+** 0.0.7 ***
+
+Fix for non-latin characters in URLs
+
+** 0.0.6 ***
+
+Rename xbmcplugin.py to fakexbmcplugin.py (thought I already did that, hmm...)
+
+** 0.0.5 ***
+
+Added option in settings 'Show Titles (If Available)'
+Error indicator and message now moves randomly about screen (this is a screensaver, not a screen burner =] )
+Added option in settings under 'Slideshow On XBMC Startup': 'Normal XBMC Slideshow (Plugins Only)'. When checked and path is a plugin, will start with an xbmc slideshow (old behavior). If unchecked (default) will start with the normal screensaver behavior.
+
+** 0.0.4 ***
+
+Added the ability to use ShareSocial image feeds (Only works with Facebook-Media 0.7.8 at this time and requires ShareSocial 0.2.0 or greater to be installed)
+Improved slideshow image loading (now loads next image while displaying current image, so less instance of black screen)
+Improved the settings dialog
+Added loading indicator and message while waiting for images to load
+Added error indicator and message if error occurs while loading images
+
+** 0.0.3 ***
+
+Fix addon.xml
+
+** 0.0.2 ***
+
+Added version printing to log
+Now cleans up classes on exit
+Cleared some unused code
+
+** 0.0.1 ***
+
+First public release
